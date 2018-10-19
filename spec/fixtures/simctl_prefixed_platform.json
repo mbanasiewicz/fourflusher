@@ -1,0 +1,67 @@
+{
+    "devices" : {
+      "iOS 10.0" : [
+        {
+          "state" : "Shutdown",
+          "isAvailable" : "YES",
+          "name" : "iPhone 5",
+          "udid" : "88EE75EA-3BA8-432C-AD97-2161025A17AE",
+          "availabilityError" : ""
+        }
+      ],
+      "com.apple.CoreSimulator.SimRuntime.tvOS-11-4" : [
+        {
+          "state" : "Shutdown",
+          "isAvailable" : "NO",
+          "name" : "Apple TV",
+          "udid" : "6A0EF60D-13CA-4625-84C4-64BB272A07F6",
+          "availabilityError" : "runtime profile not found"
+        }
+      ],
+      "iOS 11.3" : [
+        {
+          "state" : "Shutdown",
+          "isAvailable" : "YES",
+          "name" : "iPhone 5s",
+          "udid" : "DA09F7B3-463E-409E-8EEF-A28456197449",
+          "availabilityError" : ""
+        }
+      ],
+      "com.apple.CoreSimulator.SimRuntime.iOS-11-4" : [
+        {
+          "state" : "Shutdown",
+          "isAvailable" : "NO",
+          "name" : "iPhone 5s",
+          "udid" : "C2B2069E-2711-4437-8461-5EE49E025555",
+          "availabilityError" : "runtime profile not found"
+        }
+      ],
+      "com.apple.CoreSimulator.SimRuntime.iOS-12-0" : [
+        {
+          "state" : "Shutdown",
+          "isAvailable" : "NO",
+          "name" : "iPhone 5s",
+          "udid" : "0DFAD80E-5745-4A16-A700-BD2C4A0B63E4",
+          "availabilityError" : "runtime profile not found"
+        }
+      ],
+      "iOS 10.3" : [
+        {
+          "state" : "Shutdown",
+          "isAvailable" : "YES",
+          "name" : "iPhone 5",
+          "udid" : "2F43ABAC-C4B7-40C5-AE47-15674F5AE9FA",
+          "availabilityError" : ""
+        }
+      ],
+      "com.apple.CoreSimulator.SimRuntime.watchOS-4-3" : [
+        {
+          "state" : "Shutdown",
+          "isAvailable" : "NO",
+          "name" : "Apple Watch - 38mm",
+          "udid" : "618E89CD-45D7-450F-A482-D6CF78B6D590",
+          "availabilityError" : "runtime profile not found"
+        }
+      ]
+    }
+  }

@@ -120,6 +120,8 @@ module Fourflusher
 
     private
 
+    CORE_SIMULATOR_PREFIX = 'com.apple.CoreSimulator.SimRuntime.'
+
     # Gets the simulators and transforms the simctl json into Simulator objects
     def fetch_sims
       device_list = JSON.parse(list(['-j', 'devices']))['devices']
@@ -129,7 +131,16 @@ module Fourflusher
       end
       device_list.flat_map do |runtime_str, devices|
         # Sample string: iOS 9.3
-        os_name, os_version = runtime_str.split ' '
+        os_name = ''
+        os_version = ''
+        if runtime_str.include? CORE_SIMULATOR_PREFIX
+          sim_runtime_elements = runtime_str.sub(CORE_SIMULATOR_PREFIX, '').split('-')
+          os_name = sim_runtime_elements[0]
+          os_version = sim_runtime_elements[1] + '.' + sim_runtime_elements[2]
+        else
+          os_name, os_version = runtime_str.split ' '
+        end
+
         devices.map do |device|
           if device['availability'] == '(available)' || device['isAvailable'] == 'YES'
             Simulator.new(device, os_name, os_version)

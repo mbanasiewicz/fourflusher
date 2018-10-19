@@ -71,6 +71,19 @@ describe Fourflusher::SimControl do
     end
   end
 
+  describe 'finding simulators when some runtimes are unavailable' do
+    let(:simctl_json_file) { 'spec/fixtures/simctl_prefixed_platform.json' }
+    it 'can parse simulators with unavailable simulators' do
+      sim = simctl.simulator(:oldest, :ios, '10.0')
+      expect(sim.name).to eq 'iPhone 5'
+    end
+
+    it 'does not return unavailable simulators' do
+      sim = simctl.simulator(:oldest, :ios, '11.4')
+      expect(sim).to eq nil
+    end
+  end
+
   describe 'finding simulators with the Xcode 10.1 format' do
     let(:simctl_json_file) { 'spec/fixtures/simctl_xcode_10.1.json' }
 
